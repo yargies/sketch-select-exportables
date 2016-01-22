@@ -1,0 +1,10 @@
+doc.currentPage().deselectAllLayers();
+
+var slices = doc.currentPage().exportableLayers();
+var loop = [slices objectEnumerator]
+var count = 0;
+while (slice = loop.nextObject()) {
+  [slice select:true byExpandingSelection:true];
+  count++;
+}
+[doc showMessage: count + " layers selected"]
