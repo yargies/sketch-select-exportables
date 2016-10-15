@@ -1,0 +1,23 @@
+{
+    "name" : "Select Exportables",
+    "identifier" : "com.yargies.selectexportables",
+    "version" : "1.0.0",
+    "description" : "A simple plugin for Sketch to select all exportable layers, slices, and artboards.",
+    "authorEmail" : "hello@yargies.com",
+    "author" : "Kenji Wellman",
+    "commands" : [
+      {
+        "script" : "select-exportables.js",
+        "handler" : "onRun",
+        "shortcut" : "",
+        "name" : "Select Exportables",
+        "identifier" : "selectexportables"
+      }
+    ],
+    "menu": {
+      "isRoot": true,
+      "items": [
+        "selectexportables"
+      ]
+    }
+}
