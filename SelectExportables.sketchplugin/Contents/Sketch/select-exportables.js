@@ -1,6 +1,13 @@
 function onRun(context) {
   var doc = context.document;
-  doc.currentPage().deselectAllLayers();
+  var page = doc.currentPage();
+
+  // for backwards compatibility (see: http://sketchplugins.com/d/280-deselectalllayers-not-working-in-v45)
+  if(page.deselectAllLayers){
+    page.deselectAllLayers();
+  } else {
+    page.changeSelectionBySelectingLayers_([]);
+  }
 
   var count = 0;
 
