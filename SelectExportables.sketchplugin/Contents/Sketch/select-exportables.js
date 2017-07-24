@@ -9,14 +9,11 @@ function onRun(context) {
     page.changeSelectionBySelectingLayers_([]);
   }
 
-  var count = 0;
-
   // select layers
   var slices = doc.currentPage().exportableLayers();
   var loop = slices.objectEnumerator();
   while (slice = loop.nextObject()) {
     slice.select_byExpandingSelection(true, true);
-    count++;
   }
 
   // select artboards
@@ -29,5 +26,5 @@ function onRun(context) {
   //  }
   //}
 
-  doc.showMessage(count + " layers selected");
+  doc.showMessage(page.selectedLayers().layers().count() + " layers selected");
 };
