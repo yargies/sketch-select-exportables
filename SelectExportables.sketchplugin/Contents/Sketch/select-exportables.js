@@ -20,14 +20,14 @@ function onRun(context) {
   }
 
   // select artboards
-  var artboards = doc.currentPage().artboards();
-  var loop = artboards.objectEnumerator();
-  while (artboard = loop.nextObject()) {
-    if (artboard.exportOptions().exportFormats()) {
-      artboard.select_byExpandingSelection(true, true);
-      count++;
-    }
-  }
+  //var artboards = doc.currentPage().artboards();
+  //var loop = artboards.objectEnumerator();
+  //while (artboard = loop.nextObject()) {
+  //  if (artboard.exportOptions().exportFormats()) {
+  //    artboard.select_byExpandingSelection(true, true);
+  //    count++;
+  //  }
+  //}
 
   doc.showMessage(count + " layers selected");
 };
